@@ -1,9 +1,12 @@
+package lecteur;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-public class LecteurFichierClassique extends LecteurFichierTexte {
 
-    public LecteurFichierClassique(){
+public class LecteurClassique extends LecteurFichierTexte {
+
+    public LecteurClassique(){
       super();
     }
 
