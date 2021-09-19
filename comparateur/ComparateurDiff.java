@@ -23,14 +23,14 @@ public class ComparateurDiff{
             buffer_fichier1 = new BufferedReader(filereader_fichier1);
             buffer_fichier2 = new BufferedReader(filereader_fichier2);
 
-            String line_fichier1;
-            String line_fichier2;
+            String line_fichier1 = "";
+            String line_fichier2 = "";
             int ligne = 1;
 
-            while ((line_fichier1 = buffer_fichier1.readLine()) != null && (line_fichier2 = buffer_fichier2.readLine()) != null){
+            while ((line_fichier1 = buffer_fichier1.readLine()) != null || (line_fichier2 = buffer_fichier2.readLine()) != null){
 
-                if (! line_fichier1.equals(line_fichier2)){
-                    lignes_diff.add(Integer.valueOf(ligne));
+                if (line_fichier1 == null || line_fichier2 == null || (! line_fichier1.equals(line_fichier2))){
+                  lignes_diff.add(Integer.valueOf(ligne));
                 }
 
                 ligne++;
@@ -42,6 +42,5 @@ public class ComparateurDiff{
         }
 
         return lignes_diff;
-
     }
 }
