@@ -8,5 +8,3 @@ exécuterez cette dernière, vous disposez de 2 moyens pour spécifier quels fic
 
 - Soit le passage d'arguments de ligne de commande via le paramètre ```args``` de la méthode main.
 - Soit changer directement les valeurs des variables ```nom_fichier```, ```nom_fichier2``` et ``` nom_fichier_p ``` dans la méthode main.
-
-::warning:: Seul les packages lecteur et comparateur
