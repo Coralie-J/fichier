@@ -1,4 +1,4 @@
-package lecteur;
+package fichier.lecteur;
 
 
 public interface LecteurFichier {

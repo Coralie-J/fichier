@@ -1,4 +1,4 @@
-package lecteur;
+package fichier.lecteur;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -26,16 +26,25 @@ public class LecteurPalindrome extends LecteurFichierTexte {
 
             while ((line = bufferedreader.readLine()) != null) {
 
+                // Récupération de la longueur de la ligne
+
                 taille_ligne = line.length() - 1;
-                line_palindrome = line + " ";
+                line_palindrome = line + " | ";
+
+                // Parcours de la ligne à l'envers
 
                 for (int i=taille_ligne; i > -1; i--){
                     line_palindrome += line.charAt(i);
                 }
+
+                // Ajout de la ligne à son état initial concaténée avec sa version palyndromique
+
                 affichage_ligne.add(line_palindrome);
             }
 
             bufferedreader.close();
+
+            // Affichage du résultat
 
             for (int j=0; j < affichage_ligne.size(); j++){
                 System.out.println(affichage_ligne.get(j));
